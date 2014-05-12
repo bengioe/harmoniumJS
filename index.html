@@ -1,10 +1,18 @@
 <html>
 <head>
-<script type="text/javascript" src="main.js"></script>
-<script type="text/javascript" src="datatypes.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="datatypes.js"></script>
+  <script type="text/javascript" src="sound.js"></script>
+  <script type="text/javascript" src="noteEditor.js"></script>
 </head>
-<body onload="start()">
-<div id="statusbar" style="font: 12px courier">
-</div>
+<body onload="init()">
+  <div id="statusbar" style="font: 12px courier">
+  </div>
+  <div id="notation">
+    <canvas id="noteCanvas" width="800" height="400"></canvas>
+  </div>
+  <div id="nothing">
+    <input type="button" onclick="playStuff()" value="Ohayo"></input>
+  </div>
 </body>
 </html>

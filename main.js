@@ -14,3 +14,33 @@ function start(){
     var text = m.toTabHTML(instrument);
     document.getElementById("statusbar").innerHTML = text;
 }
+
+var screen;
+var editor;
+
+function redraw(){
+    screen.fillStyle = "#eee";
+    screen.fillRect(0,0,800,400);
+    editor.draw();
+}
+
+function init(){
+    screen = document.getElementById("noteCanvas").getContext("2d");
+    editor = new noteEditor();
+    setInterval(function(){
+    }, 1000);
+
+    addEventListener('keydown',
+		     function(e){
+			 if (this.isShowingKeyCodes)
+			     console.log(e.keyCode);
+			 if (e.keyCode == 32)
+			     playStuff();
+			 else if (e.keyCode == 107)
+			     this.isShowingKeyCodes = !this.isShowingKeyCodes;
+			 else
+			     editor.handleKey(e);
+			 
+		     });
+
+}
