@@ -1,6 +1,7 @@
 
 function Part(){
     this.measures = [];
+    this.instrument = new StringInstrument();
 }
 
 function Measure(){
