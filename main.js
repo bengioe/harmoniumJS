@@ -43,6 +43,8 @@ function init(){
 			     console.log(e.keyCode);
 			 if (e.keyCode == 32)
 			     playStuff();
+			 else if (e.keyCode == 'Z'.charCodeAt(0))
+			     createStuff();
 			 else if (e.keyCode == 107)
 			     this.isShowingKeyCodes = !this.isShowingKeyCodes;
 			 else
